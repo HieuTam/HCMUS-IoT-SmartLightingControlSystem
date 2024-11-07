@@ -18,7 +18,7 @@ This project, developed as part of the IoT Programming course at the University 
 Includes FSM diagrams, data flow between the controller and web service, and circuit diagrams for Arduino components.
 <div align="center">
 <img src="IMG/System Design.jpg" alt="Smart Lighting System Diagram" width="300"/>
-<img src="IMG/FSM Diagram.jpg" alt="FSM Diagram" width="300"/>
+<img src="IMG/FSM Diagram.jpg" alt="FSM Diagram" width="500"/>
 </div>
 
 ## Deployment
