@@ -1,0 +1,103 @@
+\documentclass[12pt]{article}
+
+\usepackage{hcmus-report-template}
+
+% Disable indentation on new paragraphs
+\setlength{\parindent}{0pt}
+
+% Line spacing 1.5
+\renewcommand{\baselinestretch}{1.5}
+
+% Optional: graphic path
+% \graphicspath{PATH_TO_GRAPHIC_FOLDER}
+
+% To use Times font family, uncomment this row
+% \usepackage{mathptmx}
+
+% To use roman section / subsection, uncomment these rows
+% \renewcommand{\thesection}{\Roman{section}}
+% \renewcommand{\thesubsection}{\thesection.\Roman{subsection}}
+
+% Define course name, report name and report title.
+\newcommand{\coursename}{Nhập môn lập trình kết nối vạn vật - 21KHDL}
+\newcommand{\reportname}{Smart Lighting Control System}
+\newcommand{\reporttitle}{Báo cáo Đồ án giữa kỳ}
+
+\newcommand{\studentname}{Trần Hiếu Tâm (21127423)}
+\newcommand{\teachername}{TS. Nguyễn Đức Hoàng Hạ\\ThS. Đỗ Thị Thanh Hà}
+
+% Header
+\lhead{\small\reporttitle\\Đề tài: \reportname}
+\rhead{\small
+Trường Đại học Khoa học Tự nhiên, ĐHQG-HCM\\
+\coursename
+}
+
+% Footer
+%\newcommand{\leftfooter}{Trần Hiếu Tâm (21127423)}
+\lfoot{\leftfooter}
+
+\usepackage{geometry}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{longtable}  % Required for long tables that span multiple pages
+\usepackage{verbatim}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz} % Package for graphics
+
+\usetikzlibrary{trees} % Import tree library for TikZ
+
+
+
+\usepackage{xcolor}
+\definecolor{titlepagecolor}{RGB}{0, 63, 136} % Light gray
+\definecolor{titletextcolor}{RGB}{255, 255, 255}
+
+% ============ DOCUMENT ============
+\begin{document}
+
+\pagenumbering{roman}
+
+\newgeometry{left=3cm}
+\color{titletextcolor}
+\pagecolor{titlepagecolor}
+\input{content/titleX.tex}
+
+\restoregeometry
+\nopagecolor
+\color{black}
+
+% -------------------------------
+
+\input{content/title.tex}
+
+\tableofcontents
+\pagebreak
+\listoftables
+\pagebreak
+\listoffigures
+\pagebreak
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+
+% \input{content/section}
+% \input{content/hinhanh}
+% \input{content/bangbieu}
+% \input{content/congthuctoan}
+% \input{content/thuattoan}
+% \input{content/code}
+% \input{content/ngonngu}
+% \input{content/cite}
+
+\input{IoT-mid}
+
+% References
+\input{ref/ref.tex}
+
+% Appendix
+% \appendix
+% Add \cleardoublepage to move appendices to next page.
+% \input{appendix/appendix.tex}
+\end{document}
