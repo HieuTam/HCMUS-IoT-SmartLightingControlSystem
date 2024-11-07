@@ -16,6 +16,7 @@ This project, developed as part of the IoT Programming course at the University 
 
 ## System Design
 Includes FSM diagrams, data flow between the controller and web service, and circuit diagrams for Arduino components.
+![System Design](IMG/System Design.jpg)
 
 ## Deployment
 1. Code uploaded to Arduino using Arduino IDE.
