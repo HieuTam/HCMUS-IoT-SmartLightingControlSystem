@@ -45,7 +45,19 @@ After uploading the code, close the Arduino IDE. Then, open a command prompt (CM
 
 ```bash
 flask --app app run
+```
+### Step 4. Access the Web Interface
+After executing the command successfully, open the URL provided in the command prompt to access the web interface and start using the system.
 
+### Customization
+#### Arduino Communication
+If you need to adjust the communication settings between the Arduino and the computer, you can do so by editing the /Source/app.py file.
+
+#### Interface Customization
+To modify the web interface, you can edit the following files:
+
+/Source/static/style.css for styling
+/Source/templates/index.html for layout and structure
 
 ## Release
 - **Version**: 1.0
