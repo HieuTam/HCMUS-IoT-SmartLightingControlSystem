@@ -16,7 +16,7 @@ This project, developed as part of the IoT Programming course at the University 
 
 ## System Design
 Includes FSM diagrams, data flow between the controller and web service, and circuit diagrams for Arduino components.
-![System Design](HCMUS-IoT-SmartLightingControlSystem/IMG/System Design.jpg)
+<img src="HCMUS-IoT-SmartLightingControlSystem/IMG/System Design.jpg" alt="Smart Lighting System Diagram" width="300"/>
 
 ## Deployment
 1. Code uploaded to Arduino using Arduino IDE.
