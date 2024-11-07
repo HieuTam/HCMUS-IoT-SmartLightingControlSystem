@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Lighting Control System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Logo and Title - Static Header -->
+        <header>
+            <img src="{{ url_for('static', filename='images/Logo-HCMUS.png') }}" alt="Logo" class="logo">
+            <h1>Smart Lighting Control System</h1>
+        </header>
+
+        <!-- Status and Control Card -->
+        <main>
+            <div class="card">
+                <h2>Current Light Status</h2>
+                <p id="status-indicator" class="status-indicator">{{ status | capitalize }}</p>
+                <form action="{{ url_for('toggle_light') }}" method="post">
+                    <button type="submit" class="control-button" id="control-button">
+                        {{ 'Turn Off' if status == 'on' else 'Turn On' if status == 'off' else 'Stop Blinking' }}
+                    </button>
+                    <div class="duration-input">
+                        <label for="duration">Switch Auto Mode Duration (ms):</label>
+                        <span class="tooltip">In Manual Mode, the system switches to Auto Mode during a day-night transition, adjusting the LED to ambient light. If no control button is pressed within N minutes, it also reverts to Auto Mode (If N = 0 means only day-night transitions trigger Auto Mode).</span>
+                        <input type="number" id="duration" name="duration" min="0" placeholder="Enter duration">
+                    </div>
+                </form>
+            </div>
+
+            <!-- Mode and Condition Display -->
+            <div class="info">
+                <h3>Mode: <span id="mode">{{ mode }}</span> || Condition: <span id="condition">{{ condition }}</span></h3>
+                <h3>Switch to Auto mode after: <span id="switch-mode-duration">{{ switch_mode_duration }}</span> ms</h3>
+            </div>
+        </main>
+    </div>
+
+    <!-- Copyright Section -->
+    <footer>
+        <p>&copy; 2024 FIT@HCMUS IoT Mid-Project from 21127423 - Tran Hieu Tam (<a href="mailto:thtam21@clc.fitus.edu.vn">thtam21@clc.fitus.edu.vn</a>)</p>
+    </footer>
+
+    <!-- JavaScript to Update Data -->
+    <script>
+        function fetchArduinoData() {
+            fetch('/get_arduino_data')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('status-indicator').innerText = data.status;
+                    document.getElementById('status-indicator').className = 'status-indicator ' + data.status;
+                    document.getElementById('control-button').innerText = data.status === 'On' ? 'Turn Off' : (data.status === 'Off' ? 'Turn On' : 'Stop Blinking');
+                    document.getElementById('mode').innerText = data.mode;
+                    document.getElementById('condition').innerText = data.condition;
+                    document.getElementById('switch-mode-duration').innerText = data.switch_mode_duration;
+                })
+                .catch(error => console.error("Error fetching data:", error));
+        }
+
+        setInterval(fetchArduinoData, 2000);  // Fetch data every 2 seconds
+        fetchArduinoData();  // Initial fetch on page load
+    </script>
+</body>
+</html>
