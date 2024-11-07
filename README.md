@@ -56,8 +56,8 @@ If you need to adjust the communication settings between the Arduino and the com
 #### Interface Customization
 To modify the web interface, you can edit the following files:
 
-`/Source/static/style.css` for styling
-`/Source/templates/index.html` for layout and structure
+- `/Source/static/style.css` for styling
+- `/Source/templates/index.html` for layout and structure
 
 ## Release
 - **Version**: 1.0
