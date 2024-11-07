@@ -32,6 +32,21 @@ Includes FSM diagrams, data flow between the controller and web service, and cir
 ## Testing and Results
 The system was tested in simulation (Tinkercad) and real hardware setups. Key tests included component-level validation, integration testing, and FSM behavior validation to ensure alignment with design specifications.
 
+## Instructions
+
+### Step 1: Connect Devices to Arduino
+Connect the devices to the Arduino according to the designed circuit.
+
+### Step 2: Upload Code to Arduino
+Upload the code from `/Source/IoT-SmartLighting/IoT-SmartLighting.ino` to the Arduino via USB Port using the Arduino IDE. At this stage, the system will be running, but the web interface will not be available yet.
+
+### Step 3: Run Flask Application
+After uploading the code, close the Arduino IDE. Then, open a command prompt (CMD) in the `/Source` folder and run the following command:
+
+```bash
+flask --app app run
+
+
 ## Release
 - **Version**: 1.0
 - **Release Date**: November 11, 2024
