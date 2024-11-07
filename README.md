@@ -24,6 +24,10 @@ Includes FSM diagrams, data flow between the controller and web service, and cir
 ## Deployment
 1. Code uploaded to Arduino using Arduino IDE.
 2. Flask server set up for real-time data exchange between the web interface and Arduino.
+<div align="center">
+<img src="IMG/Data Communication Diagram.jpg" alt="Data Communication Diagram" width="300"/>
+<img src="IMG/WebUXUI.png" alt="WebUXUI.png" width="450"/>
+</div>
 
 ## Testing and Results
 The system was tested in simulation (Tinkercad) and real hardware setups. Key tests included component-level validation, integration testing, and FSM behavior validation to ensure alignment with design specifications.
