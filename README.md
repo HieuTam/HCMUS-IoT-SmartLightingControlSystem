@@ -26,7 +26,7 @@ Includes FSM diagrams, data flow between the controller and web service, and cir
 2. Flask server set up for real-time data exchange between the web interface and Arduino.
 <div align="center">
 <img src="Report - LaTeX source/img/Data.jpg" alt="Data Communication Diagram" width="450"/>
-<img src="Report - LaTeX source/img/UI.png" alt="WebUXUI.png" width="450"/>
+<img src="Report - LaTeX source/img/UI.png" alt="UI.png" width="450"/>
 </div>
 
 ## Testing and Results
