@@ -22,8 +22,8 @@ Includes FSM diagrams, data flow between the controller and web service, and cir
 </div>
 
 ## Deployment
-1. Code uploaded to Arduino using Arduino IDE.
-2. Flask server set up for real-time data exchange between the web interface and Arduino.
+1. Code uploaded to Arduino using ESP32.
+2. Panel server set up for real-time data exchange between the web interface and Arduino.
 <div align="center">
 <img src="Report - LaTeX source/img/Data.jpg" alt="Data Communication Diagram" width="750"/>
 </div>
