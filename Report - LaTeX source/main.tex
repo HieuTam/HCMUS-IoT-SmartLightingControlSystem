@@ -20,11 +20,14 @@
 
 % Define course name, report name and report title.
 \newcommand{\coursename}{Nhập môn lập trình kết nối vạn vật - 21KHDL}
-\newcommand{\reportname}{Smart Lighting Control System}
-\newcommand{\reporttitle}{Báo cáo Đồ án giữa kỳ}
+\newcommand{\reportname}{Smart Lighting System (Phiên bản cải tiến)}
+\newcommand{\reporttitle}{Báo cáo Đồ án cuối kỳ}
 
-\newcommand{\studentname}{Trần Hiếu Tâm (21127423)}
-\newcommand{\teachername}{TS. Nguyễn Đức Hoàng Hạ\\ThS. Đỗ Thị Thanh Hà}
+\newcommand{\studentname}{& Trần Hiếu Tâm (21127423)}
+\newcommand{\teachername}{
+& TS. Nguyễn Đức Hoàng Hạ & \\
+& ThS. Đỗ Thị Thanh Hà & \\}
+
 
 % Header
 \lhead{\small\reporttitle\\Đề tài: \reportname}
@@ -47,20 +50,27 @@ Trường Đại học Khoa học Tự nhiên, ĐHQG-HCM\\
 
 \usetikzlibrary{trees} % Import tree library for TikZ
 
+\usepackage{dashrule}
 
 
 \usepackage{xcolor}
 \definecolor{titlepagecolor}{RGB}{0, 63, 136} % Light gray
 \definecolor{titletextcolor}{RGB}{255, 255, 255}
+\definecolor{customblue}{HTML}{335AFF}
+\definecolor{customblue_old}{HTML}{243c74}
+
 
 % ============ DOCUMENT ============
 \begin{document}
 
 \pagenumbering{roman}
 
-\newgeometry{left=3cm}
+% {\fontfamily{pcr}\selectfont}
+
 \color{titletextcolor}
 \pagecolor{titlepagecolor}
+
+\newgeometry{left=3cm}
 \input{content/titleX.tex}
 
 \restoregeometry
@@ -70,6 +80,9 @@ Trường Đại học Khoa học Tự nhiên, ĐHQG-HCM\\
 % -------------------------------
 
 \input{content/title.tex}
+
+\input{content/titleY.tex}
+\restoregeometry
 
 \tableofcontents
 \pagebreak
@@ -91,7 +104,7 @@ Trường Đại học Khoa học Tự nhiên, ĐHQG-HCM\\
 % \input{content/ngonngu}
 % \input{content/cite}
 
-\input{IoT-mid}
+\input{IoT-final}
 
 % References
 \input{ref/ref.tex}
